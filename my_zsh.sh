@@ -3,8 +3,7 @@
 # add a function path
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
-# Load all of the config files in ~/oh-my-zsh that end in .zsh
-# TIP: Add files you don't want in git to .gitignore
+# Load all of the config files in ~/my-zsh that end in .zsh
 for config_file ($ZSH/lib/*.zsh) source $config_file
 
 is_plugin() {
@@ -36,6 +35,5 @@ for plugin ($plugins); do
     source $ZSH/plugins/$plugin/$plugin.plugin.zsh
   fi
 done
-
 
 source "$ZSH/theme.zsh"
