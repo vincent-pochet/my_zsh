@@ -93,4 +93,7 @@ POST_1_7_2_GIT=$(git_compare_version "1.7.2")
 #clean up the namespace slightly by removing the checker function
 unset -f git_compare_version
 
+alias gb="git branch"
+alias gst="git status"
+alias gco="git checkout"
 
