@@ -7,8 +7,8 @@ function stage {
     server=1
   fi
   echo "Deploying branch $branch to staging$server"
-  echo "cap staging deploy:migrations -s staging_branch=$branch -s staging_server=$server"
-  cap staging deploy:migrations -s staging_branch=$branch -s staging_server=$server
+  echo "BRANCH=$branch cap staging deploy:migrations"
+  BRANCH=$branch cap staging deploy:migrations
 }
 
 function unstage {
