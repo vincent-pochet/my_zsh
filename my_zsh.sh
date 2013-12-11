@@ -6,6 +6,8 @@ fpath=($ZSH/functions $ZSH/completions $fpath)
 # Load all of the config files in ~/my-zsh that end in .zsh
 for config_file ($ZSH/lib/*.zsh) source $config_file
 
+for client_file ($ZSH/clients/*.zsh) source $client_file
+
 is_plugin() {
   local base_dir=$1
   local name=$2
