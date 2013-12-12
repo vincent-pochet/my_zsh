@@ -1,3 +1,5 @@
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
 # get the name of the ruby version
 function rvm_prompt_info() {
   [ -f $HOME/.rvm/bin/rvm-prompt ] || return
