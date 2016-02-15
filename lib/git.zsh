@@ -94,7 +94,53 @@ POST_1_7_2_GIT=$(git_compare_version "1.7.2")
 unset -f git_compare_version
 
 alias gb="git branch"
+compdef _git gst=git-branch
 alias gst="git status"
+compdef _git gst=git-status
 alias gco="git checkout"
+compdef _git gco=git-checkout
+alias gd="git diff"
+compdef _git gd=git-diff
 alias grm="git rebase origin/master"
 alias gmp="git pull --rebase origin master"
+alias gl="git pull"
+compdef _git gl=git-pull
+alias gup="git pull --rebase"
+compdef _git gup=git-fetch
+alias gp="git push"
+compdef _git gp=git-push
+alias gc="git commit -a"
+compdef _git gc=git-commit
+alias gr="git remote"
+compdef _git gr=git-remote
+alias grbi="git rebase -i"
+compdef _git grbi=git-rebase
+alias grbc="git rebase --continue"
+compdef _git grbc=git-rebase
+alias grba="git rebase --abort"
+compdef _git grba=git-rebase
+alias ga="git add"
+compdef _git ga=git-add
+alias gm="git merge"
+compdef _git gm=git-merge
+alias grh="git reset HEAD"
+alias gsta="git stash"
+alias gstp="git stash pop"
+
+
+function current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
+
+# these aliases take advantage of the previous function
+alias ggpull='git pull origin $(current_branch)'
+compdef ggpull=git
+alias ggpur='git pull --rebase origin $(current_branch)'
+compdef ggpur=git
+alias ggpush='git push origin $(current_branch)'
+compdef ggpush=git
+alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+compdef ggpnp=git
+
