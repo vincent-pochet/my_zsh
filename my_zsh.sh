@@ -39,3 +39,5 @@ for plugin ($plugins); do
 done
 
 source "$ZSH/theme.zsh"
+
+export PATH="$PATH:/usr/local/bin"

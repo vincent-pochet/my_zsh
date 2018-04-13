@@ -37,3 +37,4 @@ alias afind='ack-grep -il'
 
 alias ublue='sudo rfkill unblock bluetooth'
 
+alias meteo='curl -4 wttr.in/Geneva'
