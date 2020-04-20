@@ -1,7 +1,11 @@
 # get the name of the branch we are on
 function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "%{$fg[yellow]%}‹${ref#refs/heads/}$(parse_git_dirty)› %{$reset_color%}"
+  if [[ -n $(git symbolic-ref HEAD 2> /dev/null) ]]; then
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+    echo "$BG[052]%{${fg[cyan]}%}%{$reset_color%}$BG[052] %{$fg[yellow]%} ${ref#refs/heads/}$(parse_git_dirty)%{$reset_color%}$FG[052]%{$reset_color%}"
+  else
+    echo "%{${fg[cyan]}%}%{$reset_color%}"
+  fi
 }
 
 
