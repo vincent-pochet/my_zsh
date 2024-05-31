@@ -7,3 +7,4 @@ my_zsh
 - fastfetch
 - starship
 - trash-cli
+- bat
