@@ -8,3 +8,5 @@ my_zsh
 - starship
 - trash-cli
 - bat
+- zellij
+
