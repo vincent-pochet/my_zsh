@@ -8,5 +8,10 @@ for client_file ($ZSH/clients/*.zsh) source $client_file
 eval "$(starship init zsh)"
 
 if [ -f /usr/bin/fastfetch ]; then
-	fastfetch
+
+	# Check if the terminal is running inside VS Code
+	if [ "$VS_CODE_INTEGRATED" != "true" ]
+	then
+		fastfetch
+	fi
 fi
