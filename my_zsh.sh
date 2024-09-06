@@ -10,7 +10,7 @@ eval "$(starship init zsh)"
 if [ -f /usr/bin/fastfetch ]; then
 
 	# Check if the terminal is running inside VS Code
-	if [ "$VS_CODE_INTEGRATED" != "true" ]
+	if [ "$VS_CODE_INTEGRATED" != "true" ] && [ "$ZED_TERM" != "true" ]
 	then
 		fastfetch
 	fi
