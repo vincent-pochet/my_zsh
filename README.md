@@ -8,5 +8,8 @@ my_zsh
 - starship
 - trash-cli
 - bat
-- zellij
+- lazydocker
+- zoxide
+- ghostty
+- zed
 
