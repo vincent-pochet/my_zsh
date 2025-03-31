@@ -12,4 +12,5 @@ my_zsh
 - zoxide
 - ghostty
 - zed
+- eza
 

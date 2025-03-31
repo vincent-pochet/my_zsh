@@ -1,6 +1,6 @@
 export HISTFILE=~/.histfile
 export HISTFILESIZE=10000
-export HISTSIZE=500
+export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 

@@ -15,3 +15,5 @@ if [ -f /usr/bin/fastfetch ]; then
 		fastfetch
 	fi
 fi
+
+eval "$(zoxide init zsh)"
