@@ -13,4 +13,6 @@ my_zsh
 - ghostty
 - zed
 - eza
+- atuin
+- mise
 

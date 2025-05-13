@@ -17,3 +17,4 @@ if [ -f /usr/bin/fastfetch ]; then
 fi
 
 eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
