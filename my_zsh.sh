@@ -1,5 +1,10 @@
-autoload -Uz compinit
-compinit
+# zsh-autocomplete runs compinit itself and must load before any compdef call.
+if [ -r /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
+	source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+else
+	autoload -Uz compinit
+	compinit
+fi
 
 for config_file ($ZSH/config/*.zsh) source $config_file
 
@@ -18,3 +23,8 @@ fi
 
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
+
+# Must stay last: it only wraps zle widgets defined before it is sourced.
+if [ -r /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi

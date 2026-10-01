@@ -15,4 +15,8 @@ my_zsh
 - eza
 - atuin
 - mise
-
+- delta
+- herdr
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+- zsh-autocomplete
