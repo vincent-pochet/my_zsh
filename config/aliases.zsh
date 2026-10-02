@@ -1,7 +1,5 @@
 alias cp='cp -i'
 alias mv='mv -i'
-#alias bat='batcat'
-alias cat='bat'
 alias rm='trash -v'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
