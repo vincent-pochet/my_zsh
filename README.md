@@ -17,6 +17,7 @@ my_zsh
 - mise
 - delta
 - herdr
+- hunk
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 - zsh-autocomplete
